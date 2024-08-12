@@ -10,14 +10,14 @@ b) **Invariante de laço:** A cada iteração do loop **for**, o menor valor do 
 
 ## Prova:
 ### Inicialização:
-    Antes da inicialização do laço, *j* é igual a *n*, então o arranjo A[i : j] corresponde ao arranjo A[i : n], dessa maneira contendo o menor valor do arranjo A[i:n] igualmente.
+Antes da inicialização do laço, *j* é igual a *n*, então o arranjo A[i : j] corresponde ao arranjo A[i : n], dessa maneira contendo o menor valor do arranjo A[i:n] igualmente.
 
 ### Manutenção:
-    A cada iteração do loop, devido ao decréscimo do valor j, o arranjo A[i : j] se tornará um arranjo A[i : j-1]. Devemos analisar dois casos: **a)** Se o menor elemento do arranjo A[i : j] já estiver no arranjo A[i : j-1], a propriedade está mantida, satisfazendo a condição de manutenção. **b)** Se o menor elemento for o elemento A[j], a condicional *A[j] < A[j-1]* será satisfeita e os valores serão trocados, de maneira que o menor elemento irá para a posição A[j-1], mantendo a invariante na próxima iteração.
+A cada iteração do loop, devido ao decréscimo do valor j, o arranjo A[i : j] se tornará um arranjo A[i : j-1]. Devemos analisar dois casos: **a)** Se o menor elemento do arranjo A[i : j] já estiver no arranjo A[i : j-1], a propriedade está mantida, satisfazendo a condição de manutenção. **b)** Se o menor elemento for o elemento A[j], a condicional *A[j] < A[j-1]* será satisfeita e os valores serão trocados, de maneira que o menor elemento irá para a posição A[j-1], mantendo a invariante na próxima iteração.
 
 
 ### Terminação:
-    O laço termina quando *j* atinge um valor igual à *i+1*. Como i será um valor contido no intervalo [1,n] e a iteração de j começa em n e decresce (n, n-1, n-2... i), necessariamente o menor valor de j será i e o laço irá terminar.
+O laço termina quando *j* atinge um valor igual à *i+1*. Como i será um valor contido no intervalo [1,n] e a iteração de j começa em n e decresce (n, n-1, n-2... i), necessariamente o menor valor de j será i e o laço irá terminar.
 
 
 
@@ -39,7 +39,7 @@ Para afirmar em relação aos casos 2 e 3, precisamos provar que *n²log n* cres
 
 O algoritmo implementado tem por base o teorema de Dirichlet e sua progressão aritmética de números inteiros na forma *6n+1* ou *6n-1* para todos os primos além de 2 e 3.
 
-a) A função *findNPrimes* para porque a cada iteração do laço *for* serão encontrados números primos maiores que os testados anteriormente e como o teorema de Euclides garante a existência de uma infinidade de números primos, em algum momento a lista será preenchida com o tamanho *n* ou *n+1* e a condição de parada será atingida.
+a) A função *findNPrimes* termina porque a cada iteração do laço *for* serão encontrados números primos maiores que os testados anteriormente e como o teorema de Euclides garante a existência de uma infinidade de números primos, em algum momento a lista será preenchida com o tamanho *n* ou *n+1* e a condição de parada será atingida.
 
 b) Segundo o teorema de Dirichlet, todos os números inteiros caem dentro do seguinte conjunto de progressões aritméticas:
 
@@ -214,18 +214,27 @@ Letra C. O algoritmo é exponencial porque sua complexidade é determinada pela 
 
 a) As 5 inversões do arranjo são: (2,1), (3,1),(8,6), (8,1), (6,1).
 
-b) O arranjo que tenha n elementos ordenandos de maneira inversa (do maior para o menor). esse conjunto tem (n-1)! inversões.
+b) O arranjo que tenha n elementos ordenandos de maneira inversa (do maior para o menor). Esse conjunto tem (n-1)! inversões.
 
 
 # Questão 8
 
+a)
+Expandir:
+
+T(n)
+
+
+b)
+
+c)
 
 
 # Questão 9
 
 a) Podemos demonstar que f(n) é O(g(n)) se pudermos demonstrar que o limite de f(n)/g(n) é diferente de infinito e diferente de 0 quando n tende ao infinito. Utilizando a regra de L'Hopital, podemos obter que o limite é -1, portanto satisfazendo a propriedade de comparação dos limites.
 
-b) A notação Ω representa o limite inferior de um determinado comportamento assintótico. Se diz que *x²* é *Ω(x)*, porque *x²* cresce pelo menos tão rápido quanto *x*. A outra afirmação não é verdadeira, pois *x* não cresce tão rápido quanto *x²*, portanto afirmar que *x* é *Ω(x)* é falso.
+b) A notação Ω representa o limite inferior de um determinado comportamento assintótico. Se diz que *x²* é *Ω(x)*, porque *x²* cresce pelo menos tão rápido quanto *x*. A outra afirmação não é verdadeira, pois *x* não cresce tão rápido quanto *x²*, portanto afirmar que *x* é *Ω(x²)* é falso.
 
 # Questão 10
 
